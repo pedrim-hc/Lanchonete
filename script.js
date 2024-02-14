@@ -1,9 +1,9 @@
 let resposta = document.getElementById("resposta");
 let gravar = document.getElementById('gravar');
 let dadasdas = ["", "", ""]
-let uniHamburguer = 16 
+let uniHam = 16 
 let uniSuco = 6 
-let uniChocolate = 4 
+let uniChoc = 4 
 let precoTotal = 0
 
 lanche = []
@@ -16,7 +16,7 @@ gravar.addEventListener('click', () => {
 
     switch (alimento) {
         case "hamburguer":
-            precoUni.push((quantidade)* uniHamburguer);
+            precoUni.push((quantidade)* uniHam);
             console.log(precoUni)
             lanche.push(alimento)
             break;
@@ -26,7 +26,7 @@ gravar.addEventListener('click', () => {
             lanche.push(alimento)
             break;
         case "chocolate":
-            precoUni.push((quantidade)* uniChocolate);
+            precoUni.push((quantidade)* uniChoc);
             console.log(precoUni)
             lanche.push(alimento)
             break;
