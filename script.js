@@ -1,39 +1,47 @@
-let resposta = document.getElementById("resposta")
-let gravar = document.getElementById("gravar")
-let valor = document.getElementById("valor")
-let hamburguerPre = 16
-let SucoPre = 6
-let chocolatePre = 4
-let chocqua = []
-let sucoqua = []
-let hamburguerqua = []
+let resposta = document.getElementById("resposta");
+let gravar = document.getElementById('gravar');
+let dadasdas = ["", "", ""]
+let uniHamburguer = 16 
+let uniSuco = 6 
+let uniChocolate = 4 
+let precoTotal = 0
 
-gravar.addEventListener("click",()=>{
-   let quahamburguer = Number(document.getElementById("quahamburguer").value)
-   let quasuco = Number(document.getElementById("quasuco").value)
-   let quachocolate = Number(document.getElementById("quachocolate").value)
+lanche = []
+precoUni = []
+gravar.addEventListener('click', () => {
+    let alimento = document.getElementById("alimento").value;
+    let quantidade = document.getElementById("quantidade").value;
 
-   chocqua.push(quachocolate)
-   sucoqua.push(quasuco)
-   hamburguerqua.push(quahamburguer)
-   
-   
-   console.log(quahamburguer)
-   console.log(quasuco)
-   console.log(quachocolate)
-   
-   
+    console.log(alimento)
+
+    switch (alimento) {
+        case "hamburguer":
+            precoUni.push((quantidade)* uniHamburguer);
+            console.log(precoUni)
+            lanche.push(alimento)
+            break;
+        case "suco":
+            precoUni.push((quantidade)* uniSuco);
+            console.log(precoUni)
+            lanche.push(alimento)
+            break;
+        case "chocolate":
+            precoUni.push((quantidade)* uniChocolate);
+            console.log(precoUni)
+            lanche.push(alimento)
+            break;
+        default:
+            break;
+    }
+
+
 })
-valor.addEventListener("click",()=>{
-    let valorchoc = chocqua * chocolatePre
-    let valorsuco = sucoqua * SucoPre
-    let valorhamburguer = hamburguerqua * hamburguerPre
 
-    let valorTotal = valorchoc + valorsuco + valorhamburguer
+calcularPreco.addEventListener('click', () =>{
 
-    console.log(valorTotal)
-    resposta.innerHTML = "O valor ficou de "+valorTotal
-
-})
-
-
+    for (let i = 0; i < precoUni.length; i++) {
+        precoTotal += precoUni[i]
+        console.log(precoTotal)
+    }
+    resposta.innerHTML = `Você pediu esses lanches: ${lanche} <br>`
+                         +`e o valor total foi de ${precoTotal}`  })

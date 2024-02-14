@@ -3,23 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Padaria</title>
-    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>    
+    <title>Lanchonete</title>
+
+
 </head>
 <body>
-    <div class="box">
-<h1>Padaria</h1><hr><br>
-<label for="quahamburguer">Escreva a quantidade de Hamburguer</label><br>
-<input type="text" id="quahamburguer"><br>
-<label for="quasuco">Escreva a quantidade de Suco</label><br>
-<input type="text" id="quasuco"><br>
-<label for="quachocolate">Escreva a quantidade de Chocolate</label><br>
-<input type="text" id="quachocolate"><br>
-<button id="gravar">gravar</button><br><br>
-<button id="valor">valor</button><br><br>
-<div id="resposta"></div>
+  <div class="box">
+    <h1>Lanchonete</h1><hr><br>
+    <label for="">Digite o lanche </label><br>
+    <input type="text" id="alimento" placeholder="Lanche pedido"> <br>
+    <br>
+    <label for="">Digite a quantidade</label><br>
+    <input type="text" id="quantidade" placeholder="Quantidade pedida"> 
+    <br>
+    <button id="gravar">Gravar</button><br>
+    <br>
+    <button id="calcularPreco">Calcular</button>
+    <br>
+    <div id="resposta"></div>
+</div>
 
-    </div>
 </body>
 </html>
